@@ -20,6 +20,6 @@ public class Dolares {
 
     @Override
     public String toString() {
-       return "El saldo en dólares es: " + this.getSaldo();
+       return "El saldo en dólares es: US$" + this.getSaldo();
     }
 }

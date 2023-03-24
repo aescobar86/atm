@@ -9,10 +9,15 @@ public class Main {
     public static void seleccionarOpciones() {
         int opcion = 0;
         int opcionMoneda = 0;
+        double monto = 0.0;
+
+        Cuenta cuenta = new Cuenta();
+        Dolares dolares = new Dolares(cuenta);
 
         Scanner scanner = new Scanner(System.in);
         Scanner scannerString = new Scanner(System.in);
         Scanner scannerMoneda = new Scanner(System.in);
+        Scanner scannerMonto = new Scanner(System.in);
 
         while(true) {
             mostrarMenu();
@@ -25,11 +30,17 @@ public class Main {
                     opcionMoneda = scannerMoneda.nextInt();
                     switch (opcionMoneda) {
                         case 1:
-                            System.out.println("Dólar");
+                            //System.out.println("Dólar");
+                            System.out.println("Digite el monto en dólares: ");
+                            monto = scannerMonto.nextDouble();
+                            dolares.depositar(monto);
                             break;
                         case 2:
-                            System.out.println("Cordóbas");
-                            seleccionarMoneda();
+                            //System.out.println("Cordóbas");
+                            //seleccionarMoneda();
+                            System.out.println("Digite el monto en Córdobas: ");
+                            monto = scannerMonto.nextDouble();
+                            cuenta.depositar(monto);
                             break;
                         default:
                             break;
@@ -41,18 +52,25 @@ public class Main {
                     opcionMoneda = scannerMoneda.nextInt();
                     switch (opcionMoneda) {
                         case 1:
-                            System.out.println("Dólar");
+                            //System.out.println("Dólar");
+                            System.out.println("Digite el monto en dólares: ");
+                            monto = scannerMonto.nextDouble();
+                            dolares.retirar(monto);
                             break;
                         case 2:
-                            System.out.println("Cordóbas");
-                            seleccionarMoneda();
+                            //System.out.println("Cordóbas");
+                            //seleccionarMoneda();
+                            System.out.println("Digite el monto en Córdobas: ");
+                            monto = scannerMonto.nextDouble();
+                            cuenta.retirar(monto);
                             break;
                         default:
                             break;
                     }
                     break;
                 case 3:
-                    System.out.println("Ver Saldo");
+                    System.out.println(cuenta);
+                    System.out.println(dolares);
                     break;
                 default:
                     break;
