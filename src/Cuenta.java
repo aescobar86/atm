@@ -11,7 +11,12 @@ public class Cuenta {
     private double saldo = 0.00;
 
     public void retirar(double montoRetiro) {
-        saldo =- montoRetiro;
+        if (saldo >= montoRetiro) {
+            saldo =- montoRetiro;
+        } else {
+            System.out.println("Su saldo es insuficiente para realizar el retiro");
+            System.out.println();
+        }
     }
 
     public void depositar(double montoRetiro) {
