@@ -20,7 +20,7 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Deposito: + new Suma().operacion(numero1, numero2, 1)");
+                    System.out.println("Deposito");
                     seleccionarMoneda();
                     opcionMoneda = scannerMoneda.nextInt();
                     switch (opcionMoneda) {
@@ -36,7 +36,7 @@ public class Main {
                     }
                     break;
                 case 2:
-                    System.out.println("Retiro: + new Resta().operacion(numero1, numero2, 1)");
+                    System.out.println("Retiro");
                     seleccionarMoneda();
                     opcionMoneda = scannerMoneda.nextInt();
                     switch (opcionMoneda) {
@@ -86,9 +86,5 @@ public class Main {
         System.out.println("1) Dólar");
         System.out.println("2) Cordóba");
         System.out.println("**************************************************************");
-
-
-
-
     }
 }
