@@ -30,14 +30,11 @@ public class Main {
                     opcionMoneda = scannerMoneda.nextInt();
                     switch (opcionMoneda) {
                         case 1:
-                            //System.out.println("Dólar");
                             System.out.println("Digite el monto en dólares: ");
                             monto = scannerMonto.nextDouble();
                             dolares.depositar(monto);
                             break;
                         case 2:
-                            //System.out.println("Cordóbas");
-                            //seleccionarMoneda();
                             System.out.println("Digite el monto en Córdobas: ");
                             monto = scannerMonto.nextDouble();
                             cuenta.depositar(monto);
@@ -52,14 +49,11 @@ public class Main {
                     opcionMoneda = scannerMoneda.nextInt();
                     switch (opcionMoneda) {
                         case 1:
-                            //System.out.println("Dólar");
                             System.out.println("Digite el monto en dólares: ");
                             monto = scannerMonto.nextDouble();
                             dolares.retirar(monto);
                             break;
                         case 2:
-                            //System.out.println("Cordóbas");
-                            //seleccionarMoneda();
                             System.out.println("Digite el monto en Córdobas: ");
                             monto = scannerMonto.nextDouble();
                             cuenta.retirar(monto);
